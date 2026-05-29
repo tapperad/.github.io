@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+  <title>Alexander Tapper</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+    
+    body, html {
+    height: 100%;
+    line-height: 1.8;
+    }
+
+    .parallax {
+    /* The image used */
+    background-image: url("http://cds.cern.ch/record/2684028/files/201906-204_11.jpg?subformat=icon-1440");
+    
+    /* Full height */
+    height: 100%; 
+    
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
+    .w3-bar .w3-button {
+    padding: 16px;
+    }
+  </style>
+  <body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+      <div class="w3-bar w3-white w3-card" id="myNavbar">
+	<a href="#home" class="w3-bar-item w3-button w3-wide">ALEXANDER TAPPER</a>
+	<!-- Right-sided navbar links -->
+	<div class="w3-right w3-hide-small">
+	  <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+	  <a href="#research" class="w3-bar-item w3-button"> RESEARCH</a>
+	  <a href="#teaching" class="w3-bar-item w3-button"> TEACHING</a>
+	  <a href="#contact" class="w3-bar-item w3-button"> CONTACT</a>
+	</div>
+	<!-- Hide right-floated links on small screens and replace them with a menu icon -->
+	
+	<a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+	  <i class="fa fa-bars"></i>
+	</a>
+      </div>
+    </div>
+
+    <!-- Sidebar on small screens when clicking the menu icon -->
+    <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+      <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">close ×</a>
+      <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="#research" onclick="w3_close()" class="w3-bar-item w3-button">RESEARCH</a>
+      <a href="#teaching" onclick="w3_close()" class="w3-bar-item w3-button">TEACHING</a>
+      <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+    </nav>
+
+    <!-- Header with full-height image -->
+    <header class="parallax w3-display-container" id="home">
+<!--      <div class="w3-display-middle w3-padding-large w3-border w3-wide
+		  w3-text-bold w3-text-light-grey w3-center">
+	<h1 class="white-space:nowrap w3-xxxlarge w3-animate-opacity">DR ALEXANDER TAPPER</h1>
+      </div> -->
+    </header>
+    
+    <!-- About Section -->
+    <div class="w3-container" style="padding:16px 16px" id="about">
+      <h3 class="w3-center">ABOUT</h3>  <div class="w3-row-padding" style="margin-top:16px"></div>
+      <div class="w3-row w3-padding-large">
+	<div class="w3-card w3-quarter w3-center">
+	  <img src="https://www.imperial.ac.uk/ImageCropToolT4/imageTool/uploaded-images/20231017-tapper-alexander-1192_1708527166116_x1.jpg" width=100%>
+	</div>
+	<div class="w3-container w3-quarter"><BR></div>
+	<div class="w3-container w3-half">
+	  <h4>Imperial College London</h4>
+	  <h4>Professor of Physics</h4>
+	  <br>
+	  <A HREF="http://www.imperial.ac.uk/people/a.tapper"><h4>Departmental web page</h4></A>
+	  <A HREF="http://www.imperial.ac.uk/high-energy-physics"><h4>Particle Physics group</h4></A>
+	  <a href="http://inspirehep.net/record/1029793"><H4>INSPIRE profile</H4></a>
+	</div>
+      </div>
+    </div>
+
+    <div class="parallax w3-container">
+      <div class="w3-row-padding w3-center" style="margin-top:15%">
+      </div>
+    </div>
+	
+    <!-- Research Section -->
+    <div class="w3-container" style="padding:16px 16px" id="research">
+      <h3 class="w3-center">RESEARCH</h3>
+    </div>
+
+    <div class="w3-bar">
+      <button class="w3-bar-item w3-button"
+	      onclick="openTab('cms')">CMS</button>
+      
+      <button class="w3-bar-item w3-button"
+	      onclick="openTab('dune')">DUNE</button>
+      
+      <button class="w3-bar-item w3-button"
+	      onclick="openTab('zeus')">ZEUS</button>
+
+      <button class="w3-bar-item w3-button"
+	      onclick="openTab('hera')">HERA</button>
+
+      <button class="w3-bar-item w3-button"
+	      onclick="openTab('fastml')">FASTML</button>
+
+      <button class="w3-bar-item w3-button"
+	      onclick="openTab('pubs')">PUBLICATIONS</button>
+
+      <button class="w3-bar-item w3-button"
+	      onclick="openTab('conf')">CONFERENCES</button>
+    </div>
+
+    <div id="cms" class="w3-container exp" style="display:none">
+      <!--#include file="cms.html"-->
+    </div>
+
+    <div id="dune" class="w3-container exp" style="display:none">
+      <!--#include file="dune.html"-->
+    </div>
+
+    <div id="zeus" class="w3-container exp" style="display:none">
+      <!--#include file="zeus.html"-->
+    </div>
+
+    <div id="hera" class="w3-container exp" style="display:none">
+      <!--#include file="hera.html"-->
+    </div>
+
+    <div id="fastml" class="w3-container exp" style="display:none">
+      <!--#include file="fastml.html"-->
+    </div>
+
+    <div id="pubs" class="w3-container exp" style="display:none">
+      <!--#include file="pubs.html"-->
+    </div>
+
+    <div id="conf" class="w3-container exp" style="display:none">
+      <!--#include file="conf.html"-->
+    </div>
+
+    <div class="parallax w3-container">
+      <div class="w3-row-padding w3-center" style="margin-top:15%">
+      </div>
+    </div>
+
+    <!-- Teaching Section -->
+    <div class="w3-container" style="padding:16px 16px" id="teaching">
+      <h3 class="w3-center">TEACHING</h3>
+    </div>
+
+    <div class="w3-bar">
+      <button class="w3-bar-item w3-button"
+	      onclick="openTTab('ug')">UNDERGRADUATE</button>
+  
+      <button class="w3-bar-item w3-button"
+	      onclick="openTTab('pg')">POSTGRADUATE</button>
+      
+      <button class="w3-bar-item w3-button"
+	      onclick="openTTab('phds')">STUDENTS</button>
+    </div>
+
+    <div id="ug" class="w3-container teaching" style="display:none">
+      <!--#include file="ug.html"-->
+    </div>
+
+    <div id="pg" class="w3-container teaching" style="display:none">
+      <!--#include file="pg.html"-->
+    </div>
+
+    <div id="phds" class="w3-container teaching" style="display:none">
+      <!--#include file="phds.html"-->
+    </div>
+
+    <div class="parallax w3-container">
+      <div class="w3-row-padding w3-center" style="margin-top:15%">
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="w3-container" style="padding:16px 16px" id="contact">
+      <h3 class="w3-center">CONTACT</h3>
+      <div class="w3-col w3-half 13 m6 w3-padding-large">
+	<div class="w3-card">
+          <div class="w3-container">
+	    <BR>
+	    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.752928279969!2d-0.18136432003893496!3d51.49940131920906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876055b81f19133%3A0xd04e1ad92205e646!2sBlackett+Laboratory!5e0!3m2!1sen!2sch!4v1566577515613!5m2!1sen!2sch"
+		    frameborder="0" style="border:0" width=100% height=50% allowfullscreen>
+	    </iframe>	  
+	    <h3>Imperial College London</h3>
+	    <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Blackett Laboratory 508<br>
+	    <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +44 20 7594 7760 (<a href="https://www.imperial.ac.uk/collegedirectory/">directory</a>)<br>
+	    <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: a.tapper@imperial.ac.uk<br>
+	    <BR>	  </div>
+	</div>
+      </div>
+      <div class="w3-col w3-half 13 m6 w3-padding-large">
+	<div class="w3-card">
+	  <div class="w3-container">
+	    <BR>
+	    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2759.960511162863!2d6.051425279801681!3d46.231129990064424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c62e3330f3b0f%3A0xa8b7b740f7bdccab!2sCERN%20Building%20510%2C%201217%20Meyrin!5e0!3m2!1sen!2sch!4v1601385613621!5m2!1sen!2sch"
+	       width=100% height=50% frameborder="0" style="border:0;"
+	       allowfullscreen>
+	    </iframe>
+	    <h3>CERN Geneva</h3>
+	    <i class="fa fa-map-marker fa-fw w3-hover-text-black
+		      w3-xlarge w3-margin-right"></i>Bat. 510/1-017<br>
+	    <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +41 22 76 77536 (<a href="http://directory.web.cern.ch">directory</a>)<br>
+	    <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: alex.tapper@cern.ch<br>
+	    <BR>
+          </div>
+	</div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-64">
+<!--      <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i></a> -->
+    </footer>
+ 
+    <script>
+
+      // Toggle between showing and hiding the sidebar when clicking the menu icon
+      var mySidebar = document.getElementById("mySidebar");
+      
+      function w3_open() {
+      if (mySidebar.style.display === 'block') {
+      mySidebar.style.display = 'none';
+      } else {
+      mySidebar.style.display = 'block';
+      }
+      }
+
+      // Close the sidebar with the close button
+      function w3_close() {
+      mySidebar.style.display = "none";
+      }
+    </script>
+
+    <script>
+      function openTab(tabName) {
+      var i;
+      var x = document.getElementsByClassName("exp");
+      for (i = 0; i < x.length; i++) {
+		      x[i].style.display = "none";  
+		      }
+		      document.getElementById(tabName).style.display = "block";  
+		      }
+		      </script>
+    
+    <script>
+      function openTTab(tabName) {
+      var i;
+      var x = document.getElementsByClassName("teaching");
+      for (i = 0; i < x.length; i++) {
+		      x[i].style.display = "none";  
+		      }
+		      document.getElementById(tabName).style.display = "block";  
+		      }
+		      </script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+      // Add smooth scrolling to all links
+      $("a").on('click', function(event) {
+      
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+      });
+      } // End if
+      });
+      });
+    </script>
+
+  </body>
+</html>
+
+
+
+
